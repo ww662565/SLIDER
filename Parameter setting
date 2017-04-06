@@ -1,0 +1,14 @@
+$(obj).soChange({
+   thumbObj:null, //導航對象，預設為空
+   botPrev:null, //按鈕上一個，預設為空
+   botNext:null, //按鈕下一個。預設為空
+   changeType:'fade',//切換方式，可選：fade,slide，預設為fade，1.6版新增方法，詳見例3-定義對象切換方式為slide
+   thumbNowClass:'now', //導航對象當前的class,預設為now
+   thumbOverEvent:true,//滑鼠經過thumbObj時是否切換對象，預設為true，為false時，只有滑鼠點擊thumbObj才切換對象
+   slideTime:1000, //平滑過渡時間，預設為1000ms，為0或負值時，忽略changeType方式，切換效果為直接顯示隱藏
+   autoChange:true, //是否自動切換，預設為true
+   clickFalse:true,//導航對象點擊是否鏈接無效，預設是return false鏈接無效，當thumbOverEvent為false時，此項必須為true，否則滑鼠點擊事件衝突
+   overStop:true,//滑鼠經過切換對象時，是否停止切換，並於滑鼠離開後重啟自動切換，前提是已開啟自動切換
+   changeTime:5000, //對象自動切換時間，預設為5000ms，即5秒
+   delayTime:300 //滑鼠經過時對象切換遲滯時間，推薦值為300ms
+});
